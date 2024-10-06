@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+
+</head>
+
+<script>
+    // write();
+
+    function func() {
+        var x;
+        x = document.getElementById("I1").value;
+        
+        if (x > 10) {
+            document.getElementById("para").innerHTML = "Greater";
+        }
+        else if(x == 10)
+        {
+            document.getElementById("para").innerHTML = "Equal";
+
+        }
+        else{
+            document.getElementById("para").innerHTML = "Less";
+  
+        }
+    
+    }
+</script>
+
+
+<body>
+    <form action="" method="get">
+
+        <input type="number" placeholder="Enter Number" id="I1" name="I1">
+    
+    </form>
+    <button onclick= "func()" >Click Here</button>
+    <p id="para">
+
+        <br>
+    </p>
+
+
+
+</body>
+
+
+</html>

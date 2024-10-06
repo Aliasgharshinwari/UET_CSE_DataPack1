@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+
+</head>
+
+<script>
+    // write();
+    var x;
+
+    function func() {
+        //x = document.getElementById("I1").value;
+       // document.innerHTML.getElementById("para").innerHTML = "Hello World" + x; 
+        // document.getElementById("para").innerHTML = name;  
+         for (let i = 0; i < 10; i++) {
+        document.getElementById("para").innerText += i;  
+     }
+    }
+</script>
+
+
+<body>
+    <button onclick= "func()" >Click Here</button>
+    <p id="para">
+
+        <br>
+    </p>
+
+<form action="" method="get">
+
+    <input type="text" placeholder="Enter Text" id="I1" name="I1">
+
+</form>
+
+</body>
+
+
+</html>

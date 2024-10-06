@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+
+</head>
+
+<script>
+    
+
+function add() {
+    var num1;
+    var num2;
+
+
+    num1 = parseInt(document.getElementById("number1").value);
+    num2 = parseInt(document.getElementById("number2").value);
+    const sum = num1 + num2;
+
+    document.getElementById("para").innerHTML = sum;
+    }
+
+    function subtract() {
+    var num1;
+    var num2;
+
+
+    num1 = parseInt(document.getElementById("number1").value);
+    num2 = parseInt(document.getElementById("number2").value);
+    const sum = num1 + num2;
+    const diff = num1 - num2;
+
+        document.getElementById("para").innerHTML = diff; 
+    }
+</script>
+
+
+<body>
+    <form action="" method="get">
+        <input type="text" name="number1" id="number1" placeholder="Enter Number 1">
+        <input type="text" name="number2" id="number2" placeholder="Enter Number 2">
+    </form>
+
+    <button onclick= "add()" >Add</button>
+    <button onclick= "subtract()" >Subtract</button>
+    
+    <p id="para">
+    
+
+    <br>
+    </p>
+
+
+
+</body>
+
+
+</html>

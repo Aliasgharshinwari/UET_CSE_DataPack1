@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: black 10px;
+    color: aqua;
+    background-color: rgb(255, 255, 255);
+    outline: black 10px;
+}
+
+table{
+    align-self: center;
+    align-content: center;
+    background-color: rgb(218, 28, 28);
+    border-spacing: 10px;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: double;
+    border-spacing: 10px;
+}

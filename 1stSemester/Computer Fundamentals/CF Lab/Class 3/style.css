@@ -1,0 +1,39 @@
+/* 
+h1{
+    color: red;
+    text-align: center;
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+
+#id1{
+    color: blue;
+    text-align: center;
+}
+
+p.myclass{
+    border-style: dotted;
+    color: brown;
+    text-align: center;
+    border-color: black;
+    border-width: 5px;
+}
+
+/* .myclass{
+    border-style: dotted;
+    color: brown;
+    text-align: center;
+    border-color: black;
+    border-width: 5px;
+} */
+
+/* Universal Selector */
+
+ *{
+
+    font-size: xx-large;
+} 

@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <title>BIODATA</title>
+
+    <style>
+
+        /* Title Style*/
+        h1 {
+            text-align: center;
+            color: #fc5c65;
+        }
+
+        body {
+            background-color: #eb3b5a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+        /* Login Panel Style*/
+        .loginPanel {
+            background: #fd9644;
+            color: #4b6584;
+            width: 450px;
+            height: 360px;
+            padding-left: 10px;
+            margin: auto;
+            border-radius: 1%;
+        }
+
+         /* Data Panel Style*/
+        .dataPanel {
+            background: #45aaf2;
+            color: #fed330;
+            width: 450px;
+            height: 200px;
+            margin: auto;
+            padding-left: 10px;
+            text-align: center;
+            border-radius: 1%;
+        }
+        
+        /* List Style*/
+        .mainList {
+            display: block;
+            padding-left: 10px;
+            padding-right: 50px;
+            list-style-type: none;
+            text-align: left;
+        }
+         /* Course List Style*/
+        ul.coursesList {
+            list-style-type: none;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        /* Gender Select Input Style*/
+        input {
+            background-color: #f7b731;
+            font-style: italic;            
+        }
+
+        input:focus {
+            border: 5px #fed330;
+        }
+
+        /* Button Style*/
+        button {
+            background-color: #eb3b5a;
+            color: #f7b731;
+            text-align: center;
+            font-size: 15px;
+            width: 156px;
+            height: 48px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--Login Panel Div  -->
+    <div class="loginPanel">
+        <h1>BIODATA</h1>
+
+        <!--Main List For Form--> 
+        <ul class="mainList">
+            <li>
+                <label for="I1">Name: </label>
+                <input type="text" id="I1" placeholder="Enter Name">
+            </li>
+            <li>
+                <label for="I2">Reg No:</label>
+                <input type="text" id="I2" placeholder="Enter Registration Number">
+            </li>
+
+            <li>
+                <label for="I3">Username:</label>
+                <input type="text" id="I3" placeholder="Enter Username">
+            </li>
+            <li>
+                <label for="I4">Password:</label>
+                <input type="password" id="I4" placeholder="Enter Password">
+            </li>
+
+            <li>
+                <label for="s1">GENDER:</label>
+                <select size="2" name="s1" id="s1">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </li>
+
+            <li>
+                COURSES:
+            </li>
+
+            <li>
+                <ul class="coursesList">
+
+                    <li>
+                        <label for="I5">COMPUTER FUNDAMENTALS</label>
+                        <input type="checkbox" name="Course" id="I5">
+                    </li>
+
+                    <li>
+                        <label for="I6">COMPUTER FUNDAMENTALS LAB</label>
+                        <input type="checkbox" name="Course" id="I6">
+                    </li>
+
+                    <li>
+                        <label for="I7">ARE THE COURSES EASY?</label>
+                        <input type="radio" name="" id="I7">
+
+                    </li>
+                </ul>
+        </ul>
+
+        <!--Submit Button  -->
+        <button onclick="show()">Click Here To Submit</button>
+
+    </div>
+
+    <!--Data Panel Div  -->
+    <div class="dataPanel" id="dataPanel">
+        <p id="name">
+        </p>
+        <p id="regNo">
+        </p>
+        <p id="username">
+        </p>
+        <p id="password">
+        </p>
+        <p id="gender">
+        </p>
+    </div>
+</body>
+
+<script>
+    //Function for showing Data
+    function show() {
+       //Variable for storing name
+        var name;
+
+        //Variable for storing registration number
+        var reg_no;
+
+        //Variable for storing username
+        var username;
+
+       //Variable for storing password
+        var pass;
+
+       //Variable for storing gender selected
+        var gender;
+
+        //Assigning values from input fields to their respective variables
+        name = document.getElementById("I1").value;
+        reg_no = document.getElementById("I2").value;
+        username = document.getElementById("I3").value;
+        pass = document.getElementById("I4").value;
+        gender = document.getElementById("s1").value;
+
+        //Passing values from declared variables to the data panel
+        document.getElementById("name").innerHTML = "Name: " + name;
+        document.getElementById("regNo").innerHTML = "Registration No.: " + reg_no;
+        document.getElementById("username").innerHTML = "Username: " + username;
+        document.getElementById("password").innerHTML = "Password: " + pass;
+        document.getElementById("gender").innerHTML = "Gender: " + gender;
+
+    }
+
+</script>
+
+</html>

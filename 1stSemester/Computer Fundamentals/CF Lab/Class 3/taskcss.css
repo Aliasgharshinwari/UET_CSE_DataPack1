@@ -1,0 +1,64 @@
+.tablestyle{
+    border-style: dotted;
+    border-width: 3px;
+    color: blue;
+    text-align: center;
+    margin: 25px 500px 750px 1370px;
+
+     animation-name: move_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+     
+    font: bold;   
+}
+.tablestyle:hover{
+    border-style: dotted;
+    border-width: 3px;
+    color: blue;
+    text-align: center;
+    margin: 25px 500px 750px 1px;
+
+    animation-name: move_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+     
+    font: bold;   
+}
+
+@keyframes color_animation {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
+@keyframes move_animation {
+    from   {margin: 25px 500px 750px 1px;}
+    25%  {margin: 25px 500px 750px 1370px;}
+    50%  {margin: 25px 500px 750px 1370px;}
+    100% {margin: 25px 500px 750px 1px;}
+}
+
+ul{
+    list-style-position: inside;
+}
+
+td{
+    border-style: solid;
+    border-width: 2px;
+    color: rgb(135, 17, 182);
+    margin: auto;
+    animation-name: color_animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+div{
+    margin: auto;
+    content: url(pic1.png);
+
+}

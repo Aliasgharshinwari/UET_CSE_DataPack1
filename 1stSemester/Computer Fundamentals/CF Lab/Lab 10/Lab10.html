@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>My Calculator</title>
+
+    <style>
+        /*Title Style*/
+        h1 {
+            text-align: center;
+            color: #B33771;
+
+        }
+
+        body
+        {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: #2C3A47;
+            background-color: #25CCF7;
+        }
+        
+        .calculator {
+            background: #1B9CFC;
+            width: 1000px;
+            height: 250px;
+            padding: 30px 20px;
+            margin: auto;
+            border-radius: 1%;         
+        }
+
+        button
+        {
+        background-color: #3B3B98;
+        color: #F8EFBA;
+        text-align: center;
+        font-size: 18px;
+        width: 128px;
+        height: 48px;
+        }
+        input{
+            width: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h1>My Calculator</h1>
+
+        <form action="" method="get">
+
+            <label for="I1">Number 1:</label>
+            <input type="number" id="I1" placeholder="Enter Number 1">
+
+            <label for="I2">Operator:</label>
+            <input type="text" id="I3" placeholder="Enter Operator">
+
+            <label for="I3">Number 2:</label>
+            <input type="number" id="I2" placeholder="Enter Number 2">
+
+        </form>
+
+        <button onclick="showResult()">CALCULATE</button>
+        <p id="para">
+        </p>
+    </div>
+
+</body>
+
+<script>
+  
+
+    function showResult() {
+        //Variable for storing 1st number
+        var number1;
+
+        //Variable for storing 2nd number
+        var number2;
+        
+        //Variable for storing 2nd number
+        var operator;
+
+        //Passing float type value to number1 and number 2 from their respective input fields
+        number1 = parseFloat(document.getElementById("I1").value);
+        number2 = parseFloat(document.getElementById("I2").value);
+       
+       //Getting operator type from its input field
+        operator = document.getElementById("I3").value;
+
+        //Calculation Logic  
+        if(operator == "+"){
+            result = parseFloat(number1 + number2);
+            document.getElementById("para").innerHTML = "Your calculated value is: " + result;
+        }
+         else if(operator == "-")
+         {
+             result = parseFloat(number1 - number2);
+             document.getElementById("para").innerHTML = "Your calculated value is: " + result;
+         }
+
+         else if(operator == "*")
+         {
+             result = parseFloat(number1 * number2);
+             document.getElementById("para").innerHTML = "Your calculated value is: " + result;
+         }
+
+         else if(operator == "/")
+         {
+             result = parseFloat(number1 / number2);
+             document.getElementById("para").innerHTML = "Your calculated value is: " + result;
+         }
+
+         else
+         {
+             document.getElementById("para").innerHTML = "Wrong Symbol!!";
+         }
+    }
+    
+
+
+</script>
+
+</html>
